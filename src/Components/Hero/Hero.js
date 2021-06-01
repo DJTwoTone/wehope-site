@@ -17,7 +17,7 @@ const Hero = () => {
                 <HeroContainer>
                     <HeroInfo>
                         <HeroText>
-
+                        WeHOPE  is an NPO based in Ulsan, South Korea. We are growing quickly as we continue to develop new programs and expand our outreach in the communities we serve.
                         </HeroText>
                         <HeroCalendar>
 
@@ -28,7 +28,7 @@ const Hero = () => {
                            infinite
                            showArrows
                            showIndicator
-                           slidesToShow={3}
+                           slidesToShow={1}
                     >
                         <CarouselItem>1</CarouselItem>
                         <CarouselItem>2</CarouselItem>

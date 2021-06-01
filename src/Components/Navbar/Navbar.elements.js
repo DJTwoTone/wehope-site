@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
-import { Container } from '../../globalStyles';
+import { Container, Button } from '../../globalStyles';
 
 
 export const Nav = styled.nav`
@@ -67,3 +67,11 @@ export const NavLink = styled(Link)`
     padding: 2.75rem;
     height: 100%
 `;
+
+export const NavButton = styled(Button)`
+    background: #543263;
+    cursor: pointer;
+
+    ${Button}
+`;
+

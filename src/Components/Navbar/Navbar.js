@@ -7,7 +7,8 @@ import {
     LogoImg,
     NavMenu,
     NavItem,
-    NavLink
+    NavLink,
+    NavButton
 
 } from './Navbar.elements'
 
@@ -27,6 +28,16 @@ const Navbar = () => {
                         </NavLink>
                     </NavItem>
                     <NavItem>
+                        <NavLink to='/programs'>
+                            PROGRAMS
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink to='/events'>
+                            EVENTS
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
                         <NavLink to='/blog'>
                             BLOG
                         </NavLink>
@@ -38,12 +49,16 @@ const Navbar = () => {
                     </NavItem>
                     <NavItem>
                         <NavLink to='/volunteer'>
-                            VOLUNTEER
+                            <NavButton>
+                                VOLUNTEER
+                            </NavButton>
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink to='/donate'>
-                            DONATE
+                            <NavButton>
+                                DONATE
+                            </NavButton>
                         </NavLink>
                     </NavItem>
                 </NavMenu>
