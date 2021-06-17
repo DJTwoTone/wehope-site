@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import sanityClient from '../../client';
 import {
     ProgramsSection,
     ProgramsContainer,
@@ -11,16 +12,30 @@ import {
 import ProgramsCard from '../ProgramsCard/ProgramsCard';
 
 function OurPrograms() {
+
+    const [ourProgramsText, setOurProgramsText] = useState('');
+
+    useEffect(() => {
+        sanityClient
+        .fetch(`*[slug.current == 'home-page-programs-description']{
+            passageText
+        }[0]`)
+        .then((data) => {
+            setOurProgramsText(data.passageText)
+        })
+        .catch(console.error)
+    }, [])
+
     return (
-        <>
+        <div>
             <ProgramsSection>
                 <ProgramsContainer>
                     <OurProgramsHeader>
                         <OurProgramsTitle>
-
+                            Our Programs
                         </OurProgramsTitle>
                         <OurProgramsDescription>
-
+                            {ourProgramsText}
                         </OurProgramsDescription>
                     </OurProgramsHeader>
                     <Programs>
@@ -37,7 +52,7 @@ function OurPrograms() {
                 </ProgramsContainer>
             </ProgramsSection>
             
-        </>
+        </div>
     )
 }
 

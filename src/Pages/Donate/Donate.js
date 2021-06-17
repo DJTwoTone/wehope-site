@@ -1,11 +1,11 @@
 import React from 'react'
 
-function History() {
+function Donate() {
     return (
         <div>
-            <p>History Page</p>
+            <p>Donate Page</p>
         </div>
     )
 }
 
-export default History
+export default Donate

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import sanityClient from '../../client';
 import {
     HeroSection,
     HeroContainer,
@@ -11,13 +12,28 @@ import {
 } from './Hero.elements';
 
 const Hero = () => {
+    const [heroText, setHeroText] = useState('');
+
+    useEffect(() => {
+        sanityClient
+        .fetch(`*[slug.current == 'home-page-hero-description']{
+            passageText
+        }[0]`)
+        .then((data) => {
+            setHeroText(data.passageText)}
+            )
+        .catch(console.error);
+
+    }, [])
+
+
     return (
-        <>
+        <div>
             <HeroSection>
                 <HeroContainer>
                     <HeroInfo>
                         <HeroText>
-                        WeHOPE  is an NPO based in Ulsan, South Korea. We are growing quickly as we continue to develop new programs and expand our outreach in the communities we serve.
+                        {heroText}
                         </HeroText>
                         <HeroCalendar>
 
@@ -36,7 +52,7 @@ const Hero = () => {
                     </HeroCarousel>
                 </HeroContainer>
             </HeroSection>
-        </>
+        </div>
     )
 }
 

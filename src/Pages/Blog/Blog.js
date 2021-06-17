@@ -1,11 +1,11 @@
 import React from 'react'
 
-function UpcomingEvents() {
+function Blog() {
     return (
         <div>
-            
+            <p>Blog Page</p>
         </div>
     )
 }
 
-export default UpcomingEvents
+export default Blog

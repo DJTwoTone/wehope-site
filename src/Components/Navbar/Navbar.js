@@ -23,7 +23,7 @@ const Navbar = () => {
 
                 <NavMenu>
                     <NavItem>
-                        <NavLink to='/about'>
+                        <NavLink to='/aboutus'>
                             ABOUT
                         </NavLink>
                     </NavItem>

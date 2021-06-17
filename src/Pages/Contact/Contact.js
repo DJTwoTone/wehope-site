@@ -1,11 +1,11 @@
 import React from 'react'
 
-function History() {
+function Contact() {
     return (
         <div>
-            <p>History Page</p>
+            <p>Contact Page</p>
         </div>
     )
 }
 
-export default History
+export default Contact
